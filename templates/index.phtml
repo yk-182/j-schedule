@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>J.League Match Calendar</title>
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
+    <link href='//fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <!-- Bulma Version 0.8.x-->
+    <link rel="stylesheet" href="https://unpkg.com/bulma@0.8.0/css/bulma.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/bulma-checkradio.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/mycss.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script rel="javascript" type="text/javascript" src="../js/index.js"></script>
+</head>
+
+<body>
+<section class="hero is-info is-fullheight">
+
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            <div class="column is-6 is-offset-3">
+                <div class="box">
+                    <form>
+                        <div class="subtitle">
+                            GoogleカレンダーにJリーグクラブの試合日程を登録できます。<br>
+                            カレンダーに登録したいクラブを選択してください。（パソコンから登録してください）
+                        </div>
+                        <hr class="login-hr">
+                        <!-- division -->
+                        <label class="label">Division(2021)</label>
+                        <div class="field">
+                            <input class="is-checkradio is-info is-small" id="radio-j1" type="radio" name="division" value="j1" checked="checked">
+                            <label for="radio-j1">J1</label>
+                            <input class="is-checkradio is-info is-small" id="radio-j2" type="radio" name="division" value="j2">
+                            <label for="radio-j2">J2</label>
+                            <input class="is-checkradio is-info is-small" id="radio-j3" type="radio" name="division" value="j3">
+                            <label for="radio-j3">J3</label>
+                        </div>
+
+                        <!-- Club Team -->
+                        <div id="select-div" class="control club-select">
+                            <label class="label">Club Team</label>
+                            <div id="select-j1" class="select is-info is-fullwidth">
+                                <select class="option-j1">
+                                    <option hidden>選択してください</option>
+                                    <?php foreach ($club_array["j1"] as $key => $club): ?>
+                                        <option value="<?php echo $key; ?>"><?php echo $club; ?></option>
+                                    <?php endforeach; ?>
+                                </select>
+                            </div>
+                            <div id="select-j2" class="select is-info is-fullwidth">
+                                <select class="option-j2">
+                                    <option hidden>選択してください</option>
+                                    <?php foreach ($club_array["j2"] as $key => $club): ?>
+                                        <option value="<?php echo $key; ?>"><?php echo $club; ?></option>
+                                    <?php endforeach; ?>
+                                </select>
+                            </div>
+                            <div id="select-j3" class="select is-info is-fullwidth">
+                                <select class="option-j3">
+                                    <option hidden>選択してください</option>
+                                    <?php foreach ($club_array["j3"] as $key => $club): ?>
+                                        <option value="<?php echo $key; ?>"><?php echo $club; ?></option>
+                                    <?php endforeach; ?>
+                                </select>
+                            </div>
+
+                        </div>
+
+                        <!-- Register -->
+                        <div class="field is-grouped is-grouped-centered">
+                            <p class="control">
+                                <a id="gcal" class="button is-link is-rounded is-static" target="_blank">Register</a>
+                            </p>
+                        </div>
+
+                    </form>
+                </div><!-- box -->
+            </div>
+        </div>
+    </div>
+
+</section>
+</body>
+</html>

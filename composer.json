@@ -1,0 +1,54 @@
+{
+  "name": "jleague/gcal_regist_api",
+  "description": "A Slim Framework skeleton application for rapid development",
+  "keywords": [
+    "microframework",
+    "rest",
+    "router",
+    "psr7"
+  ],
+  "homepage": "http://github.com/slimphp/Slim-Skeleton",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Josh Lockhart",
+      "email": "info@joshlockhart.com",
+      "homepage": "http://www.joshlockhart.com/"
+    }
+  ],
+  "require": {
+    "php": ">=7.2",
+    "ext-json": "*",
+    "electrolinux/phpquery": "^0.9.6",
+    "google/apiclient": "^2.0",
+    "google/auth": "^1.0",
+    "monolog/monolog": "^1.17",
+    "slim/php-view": "^2.0",
+    "slim/slim": "^3.1"
+  },
+  "require-dev": {
+    "phpstan/phpstan": "^0.12.2",
+    "phpunit/phpunit": ">=5.0",
+    "squizlabs/php_codesniffer": "3.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Gcal\\Register\\": "src/",
+      "Gcal\\Register\\Controller\\": "src/controller/",
+      "Gcal\\Register\\Service\\": "src/service/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
+  },
+  "config": {
+    "process-timeout": 0,
+    "sort-packages": true
+  },
+  "scripts": {
+    "start": "php -S localhost:8080 -t public",
+    "test": "phpunit"
+  }
+}

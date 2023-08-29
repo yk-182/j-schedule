@@ -1,0 +1,14 @@
+/vendor/
+/logs/*
+/node_modules/*
+!/logs/README.md
+/.idea/
+app.log
+phpinfo.php
+gcal_regist_api.log
+composer.phar
+*.log
+./conf/certification.json
+
+# テストファイル
+info.php
