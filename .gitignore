@@ -8,7 +8,7 @@ phpinfo.php
 gcal_regist_api.log
 composer.phar
 *.log
-./conf/certification.json
+/conf/certification.json
 
 # テストファイル
 info.php
